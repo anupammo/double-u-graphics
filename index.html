@@ -18,10 +18,19 @@
       text-decoration: none;
     }
 
-    header {
-      background-image: url(https://images.pexels.com/photos/7147720/pexels-photo-7147720.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1);
-      background-size: cover;
-      background-position: top;
+    #smoke-bg {
+      background-image: url(img/blue-smoke.png);
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: top center;
+      /* z-index: -1;
+      position: relative;
+      animation: mymove 60s infinite; */
+    }
+
+    #radial-bg {
+      background: rgb(0, 0, 0);
+      background: radial-gradient(circle, rgba(0, 0, 0, 0) 45%, rgba(255, 255, 255, 1) 55%);
     }
 
     header>div {
@@ -30,13 +39,19 @@
     }
 
     header>div>div {
-      background: rgb(25, 135, 84);
-      background: linear-gradient(45deg, rgba(25, 135, 84, .8) 50%, rgba(0, 0, 0, 0) 50%);
+      background: rgb(13, 110, 253);
+      background: linear-gradient(45deg, rgba(13, 110, 253, 1) 50%, rgba(0, 0, 0, 0) 50%);
     }
 
     .dsp-blk {
       width: 120px;
       height: 120px;
+    }
+
+    @keyframes mymove {
+      50% {
+        transform: rotate(360deg);
+      }
     }
   </style>
 
@@ -47,10 +62,10 @@
   <header>
     <div>
       <div>
-        <nav class="navbar navbar-expand-lg navbar-dark mb-5 py-5">
+        <nav class="navbar navbar-expand-md navbar-light mb-5 py-5">
           <div class="container">
-            <a class="navbar-brand fw-bolder" href="./">Double U</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+            <a class="navbar-brand fw-bolder text-white" href="./">UU Graphics</a>
+            <button class="navbar-toggler shadow-none" type="button" data-bs-toggle="collapse"
               data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
               aria-label="Toggle navigation">
               <span class="navbar-toggler-icon"></span>
@@ -82,7 +97,7 @@
                   </ul>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link fw-bolder active" href="contact-us.html">Conatct us</a>
+                  <a class="nav-link fw-bolder active" href="contact-us.html">Contact us</a>
                 </li>
               </ul>
             </div>
@@ -91,10 +106,8 @@
         <div class="container">
           <div class="row">
             <div class="col-md-6 col-12">
-              <h1 class="text-white fw-bolder display-1 my-5 py-3">Double U Graphics</h1>
-            </div>
-            <div class="col-md-6 col-12">
-              <ul class="list-group my-5">
+              <h1 class="text-white fw-bolder display-1">UU <br />Graphics</h1>
+              <ul class="list-group bg-primary my-5">
                 <li class="list-group-item bg-transparent fw-bolder lead text-light text-end border-0 my-2 py-1">
                   Apparels
                   <span class="ms-3">
@@ -121,14 +134,11 @@
                 </li>
               </ul>
             </div>
-          </div>
-          <div class="row">
-            <div class="col-12">
-              <div class="text-center my-5">
-                <a class="btn btn-light rounded-pill shadow-none m-3 px-5 py-2" href="about-us.html">About
-                  us</a>
-                <a class="btn btn-dark rounded-pill shadow-none m-3 px-5 py-2" href="contact-us.html">Contact
-                  us</a>
+            <div class="bg-transparent col-md-6 col-12 p-0">
+              <div class="bg-white" id="smoke-bg">
+                <div class="h-100" id="radial-bg">
+                  <img src="img/professionals.png" class="mt-5 pt-5" alt="">
+                </div>
               </div>
             </div>
           </div>
@@ -136,21 +146,38 @@
       </div>
     </div>
   </header>
-  <section class="my-5">
+  <section>
     <div class="container">
       <div class="row">
         <div class="col-12">
-          <h2 class="text-center fw-bolder display-4 my-5">Services - Double U Graphics</h2>
+          <div class="text-center my-5">
+            <a class="btn btn-outline-dark rounded-pill shadow-none m-3 px-5 py-2" href="contact-us.html">Contact
+              us</a>
+            <a class="btn btn-outline-primary rounded-pill shadow-none m-3 px-5 py-2" href="about-us.html">About
+              us</a>
+          </div>
         </div>
       </div>
     </div>
+  </section>
+  <section>
+    <div class="container">
+      <div class="row">
+        <div class="col-12">
+          <h2 class="text-center fw-bolder display-4 mb-5">About UU Graphics</h2>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section>
     <div class="container">
       <div class="row">
         <div class="col-md-6 col-12 px-5">
           <img class="img-fluid p-5" src="res/Designer.png" alt="">
         </div>
         <div class="col-md-6 col-12">
-          <h3 class="text-center lead fw-bolder fs-4 py-2">Apparels | Sticker & Decals <br /> Signs & Banners | Vehicle
+          <h3 class="text-center lead fw-bolder fs-4 py-2">Apparels | Sticker & Decals <br /> Signs & Banners |
+            Vehicle
             Graphics & Wrap </h3>
           <p class="text-center lead py-4">It is a long established fact that a reader will be distracted by the
             readable content
@@ -158,7 +185,63 @@
             distribution of letters, as opposed to using 'Content here, content here', making it look like readable
             English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model
             text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions
-            have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).</p>
+            have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section>
+    <div class="container">
+      <div class="row">
+        <div class="col-12">
+          <h2 class="text-center fw-bolder display-4 mb-5">Services of UU Graphics</h2>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section>
+    <div class="container">
+      <div class="row">
+        <div class="col-12">
+          <h3 class="text-center lead fw-bolder fs-4 py-2">Apparels | Sticker &amp; Decals <br> Signs &amp; Banners |
+            Vehicle Graphics &amp; Wrap </h3>
+          <p class="text-center lead py-4">It is a long established fact that a reader will be distracted by the
+            readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a
+            more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it
+            look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as
+            their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy.
+            Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour
+            and the like).
+          </p>
+        </div>
+      </div>
+    </div>
+    <div class="container py-5">
+      <div class="row">
+        <div class="col-lg-3 col-md-6 col-12 px-0">
+          <div>
+            <img src="img/apparels.jpg" class="img-fluid" alt="">
+            <p class="text-center my-0 py-3">Apparels</p>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-6 col-12 px-0">
+          <div>
+            <p class="text-center my-0 py-3">Stickers & Decals</p>
+            <img src="img/sticker-n-decals.jpg" class="img-fluid" alt="">
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-6 col-12 px-0">
+          <div>
+            <img src="img/signs-n-banners.jpg" class="img-fluid" alt="">
+            <p class="text-center my-0 py-3">Signs & Banners</p>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-6 col-12 px-0">
+          <div>
+            <p class="text-center my-0 py-3">Vehicle Graphics & Wraps</p>
+            <img src="img/vehicle-graphics-n-wrap.jpg" class="img-fluid" alt="">
+          </div>
         </div>
       </div>
     </div>
@@ -166,51 +249,111 @@
   <section>
     <div class="container-fluid">
       <div class="row">
-        <div class="col-md-6 col-12 px-0">
-          <div class="card rounded-0 border-0">
-            <img src="res/pexels-photo-428338.png" class="card-img rounded-0" alt="">
-            <div class="card-img-overlay p-0">
-              <a href="apparels.html">
-                <div class="dsp-blk bg-primary text-white position-absolute bottom-0 end-0 py-4 m-3">
-                  <p class="card-text text-center fw-bolder h5 p-3 my-2">Apparels</p>
+        <div class="col-lg-6 col-12 px-0 bg-warning">
+          <h2 class="text-white text-center fw-bolder display-4 mt-5">Review</h2>
+          <p class="text-white text-center fw-bolder fs-4 mb-5">from clients of UU Graphics</p>
+          <div class="bg-warning p-5 ">
+            <div class="row">
+              <div class="col">
+                <div class="card bg-transparent border-0 rounded-0 my-3">
+                  <div class="card-header bg-transparent bg-white border-0 p-0"
+                    style="margin-bottom: -40px; z-index: 0;">
+                    <img width="120" class="d-block mx-auto border border-white border-5"
+                      src="https://images.pexels.com/photos/3786525/pexels-photo-3786525.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load"
+                      alt="">
+                  </div>
+                  <div class="card-body bg-white">
+                    <blockquote class="blockquote mb-0">
+                      <p class="lead fs-6 mt-4 py-3">A well-known quote, contained in a blockquote element.</p>
+                      <footer class="blockquote-footer">
+                        <span class="fw-bolder text-danger">Someone famous</span>
+                        <br />in
+                        <cite title="Source Title" class="text-primary">Source Title</cite>
+                      </footer>
+                    </blockquote>
+                  </div>
                 </div>
-              </a>
+                <div class="card bg-transparent border-0 rounded-0 my-3">
+                  <div class="card-header bg-transparent bg-white border-0 p-0"
+                    style="margin-bottom: -40px; z-index: 0;">
+                    <img width="120" class="d-block mx-auto border border-white border-5"
+                      src="https://images.pexels.com/photos/3760324/pexels-photo-3760324.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load"
+                      alt="">
+                  </div>
+                  <div class="card-body bg-white">
+                    <blockquote class="blockquote mb-0">
+                      <p class="lead fs-6 mt-4 py-3">A well-known quote, contained in a blockquote element.</p>
+                      <footer class="blockquote-footer">
+                        <span class="fw-bolder text-danger">Someone famous</span>
+                        <br />in
+                        <cite title="Source Title" class="text-primary">Source Title</cite>
+                      </footer>
+                    </blockquote>
+                  </div>
+                </div>
+              </div>
+              <div class="col">
+                <div class="card bg-transparent border-0 rounded-0 my-3">
+                  <div class="card-header bg-transparent bg-white border-0 p-0"
+                    style="margin-bottom: -40px; z-index: 0;">
+                    <img width="120" class="d-block mx-auto border border-white border-5"
+                      src="https://images.pexels.com/photos/3760046/pexels-photo-3760046.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load"
+                      alt="">
+                  </div>
+                  <div class="card-body bg-white">
+                    <blockquote class="blockquote mb-0">
+                      <p class="lead fs-6 mt-4 py-3">A well-known quote, contained in a blockquote element.</p>
+                      <footer class="blockquote-footer">
+                        <span class="fw-bolder text-danger">Someone famous</span>
+                        <br />in
+                        <cite title="Source Title" class="text-primary">Source Title</cite>
+                      </footer>
+                    </blockquote>
+                  </div>
+                </div>
+                <div class="card bg-transparent border-0 rounded-0 my-3">
+                  <div class="card-header bg-transparent bg-white border-0 p-0"
+                    style="margin-bottom: -40px; z-index: 0;">
+                    <img width="120" class="d-block mx-auto border border-white border-5"
+                      src="https://images.pexels.com/photos/6333498/pexels-photo-6333498.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load"
+                      alt="">
+                  </div>
+                  <div class="card-body bg-white">
+                    <blockquote class="blockquote mb-0">
+                      <p class="lead fs-6 mt-4 py-3">A well-known quote, contained in a blockquote element.</p>
+                      <footer class="blockquote-footer">
+                        <span class="fw-bolder text-danger">Someone famous</span>
+                        <br />in
+                        <cite title="Source Title" class="text-primary">Source Title</cite>
+                      </footer>
+                    </blockquote>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
-        <div class="col-md-6 col-12 px-0">
-          <div class="card rounded-0 border-0">
-            <img src="res/stickers.png" class="card-img rounded-0" alt="">
-            <div class="card-img-overlay p-0">
-              <a href="sticker-decals.html">
-                <div class="dsp-blk bg-primary text-white position-absolute bottom-0 start-0 py-2 m-3">
-                  <p class="card-text text-center fw-bolder h5 p-3">Sticker <br />& <br />Decals</p>
+        <div class="col-lg-6 col-12 px-0 bg-primary">
+          <h2 class="text-white text-center fw-bolder display-4 mt-5">Clients</h2>
+          <p class="text-white text-center fw-bolder fs-4 mb-5">of UU Graphics over the Globe</p>
+          <div class="bg-primary p-5">
+            <div class="row">
+              <div class="col">
+                <div class="card my-4">
+                  <img class="img-fluid px-5" src="res/Designer.png" alt="">
                 </div>
-              </a>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-6 col-12 px-0">
-          <div class="card rounded-0 border-0">
-            <img src="res/urban-poster.png" class="card-img rounded-0" alt="">
-            <div class="card-img-overlay p-0">
-              <a href="signs-n-banners.html">
-                <div class="dsp-blk bg-primary text-white position-absolute top-0 end-0 py-2 m-3">
-                  <p class="card-text text-center fw-bolder h5 p-3">Signs <br />& <br />Banners</p>
+                <div class="card my-4">
+                  <img class="img-fluid px-5" src="res/Designer.png" alt="">
                 </div>
-              </a>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-6 col-12 px-0">
-          <div class="card rounded-0 border-0">
-            <img src="res/pexels-photo-5214417.png" class="card-img rounded-0" alt="">
-            <div class="card-img-overlay p-0">
-              <a href="vehicle-graphics-n-wraps.html">
-                <div class="dsp-blk bg-primary text-white position-absolute top-0 start-0 py-2 m-3">
-                  <p class="card-text text-center fw-bolder h5 p-3">Vehicle <br />Graphics<br /> & Wrap</p>
+              </div>
+              <div class="col">
+                <div class="card my-4">
+                  <img class="img-fluid px-5" src="res/Designer.png" alt="">
                 </div>
-              </a>
+                <div class="card my-4">
+                  <img class="img-fluid px-5" src="res/Designer.png" alt="">
+                </div>
+              </div>
             </div>
           </div>
         </div>
